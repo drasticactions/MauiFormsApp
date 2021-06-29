@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31429.26
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiApp", "MauiApp\MauiApp.csproj", "{30E7E1D6-D503-4E0F-BD5C-D1AAA82D5AB5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiApp.WinUI", "MauiApp.WinUI\MauiApp.WinUI.csproj", "{B315964C-135D-4D6E-A1C7-02B9805C6039}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MAUI", "MAUI", "{3F681756-B6A9-4ACB-A263-74FA4360875C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{1CF7D82B-3A0D-4F7B-B746-C4E3FDE1B843}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormsNet6", "FormsNet6\FormsNet6.csproj", "{F6A49CCD-857E-477E-87D9-F48D470E9DD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsNet6.Android", "FormsNet6.Android\FormsNet6.Android.csproj", "{1A48C945-7095-4CA7-AADB-A9D6A1346661}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30E7E1D6-D503-4E0F-BD5C-D1AAA82D5AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30E7E1D6-D503-4E0F-BD5C-D1AAA82D5AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30E7E1D6-D503-4E0F-BD5C-D1AAA82D5AB5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{30E7E1D6-D503-4E0F-BD5C-D1AAA82D5AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30E7E1D6-D503-4E0F-BD5C-D1AAA82D5AB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30E7E1D6-D503-4E0F-BD5C-D1AAA82D5AB5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B315964C-135D-4D6E-A1C7-02B9805C6039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B315964C-135D-4D6E-A1C7-02B9805C6039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B315964C-135D-4D6E-A1C7-02B9805C6039}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B315964C-135D-4D6E-A1C7-02B9805C6039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B315964C-135D-4D6E-A1C7-02B9805C6039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B315964C-135D-4D6E-A1C7-02B9805C6039}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F6A49CCD-857E-477E-87D9-F48D470E9DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A49CCD-857E-477E-87D9-F48D470E9DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A49CCD-857E-477E-87D9-F48D470E9DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A49CCD-857E-477E-87D9-F48D470E9DD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A48C945-7095-4CA7-AADB-A9D6A1346661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A48C945-7095-4CA7-AADB-A9D6A1346661}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A48C945-7095-4CA7-AADB-A9D6A1346661}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1A48C945-7095-4CA7-AADB-A9D6A1346661}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A48C945-7095-4CA7-AADB-A9D6A1346661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A48C945-7095-4CA7-AADB-A9D6A1346661}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{30E7E1D6-D503-4E0F-BD5C-D1AAA82D5AB5} = {3F681756-B6A9-4ACB-A263-74FA4360875C}
+		{B315964C-135D-4D6E-A1C7-02B9805C6039} = {3F681756-B6A9-4ACB-A263-74FA4360875C}
+		{F6A49CCD-857E-477E-87D9-F48D470E9DD8} = {1CF7D82B-3A0D-4F7B-B746-C4E3FDE1B843}
+		{1A48C945-7095-4CA7-AADB-A9D6A1346661} = {1CF7D82B-3A0D-4F7B-B746-C4E3FDE1B843}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+EndGlobal
