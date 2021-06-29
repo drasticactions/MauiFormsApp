@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.Xaml.Diagnostics;
 
 namespace FormsNet6
 {
@@ -10,7 +12,16 @@ namespace FormsNet6
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
+            Xamarin.Forms.Xaml.Diagnostics.VisualDiagnostics.VisualTreeChanged += VisualDiagnostics_VisualTreeChanged;
+        }
+        private void VisualDiagnostics_VisualTreeChanged(object sender, Xamarin.Forms.Xaml.Diagnostics.VisualTreeChangeEventArgs e)
+        {
+            var parentSourInfo = Xamarin.Forms.Xaml.Diagnostics.VisualDiagnostics.GetXamlSourceInfo(e.Parent);
+            var childSourInfo = Xamarin.Forms.Xaml.Diagnostics.VisualDiagnostics.GetXamlSourceInfo(e.Child);
+            Debug.WriteLine($"VisualTreeChangeEventArgs {e.ChangeType}:" +
+                $"{e.Parent}:{parentSourInfo?.SourceUri}:{parentSourInfo?.LineNumber}:{parentSourInfo?.LinePosition}-->" +
+                $" {e.Child}:{childSourInfo?.SourceUri}:{childSourInfo?.LineNumber}:{childSourInfo?.LinePosition}");
         }
 
         protected override void OnStart()

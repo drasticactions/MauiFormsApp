@@ -24,5 +24,10 @@ namespace FormsNet6
         {
             this.ButtonToBeClicked.Text = "Clicked!";
         }
+
+        private void NavigationPageButton_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new MainPage());
+        }
     }
 }

@@ -20,5 +20,6 @@
         </Label>
         <Button Clicked="Button_Clicked" Text="Add New Label"/>
         <Button x:Name="ButtonToBeClicked" Clicked="ButtonToBeClicked_Clicked" Text="Click me!" />
+        <Button x:Name="NavigationPageButton" Clicked="NavigationPageButton_Clicked" Text="Navigate to Main Page"/>
     </StackLayout>
 </ContentPage>
