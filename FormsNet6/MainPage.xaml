@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FormsNet6.MainPage">
 
-    <StackLayout>
+    <StackLayout x:Name="InitialStack">
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="Welcome to your app!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
         <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
@@ -19,6 +19,8 @@
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+        <Button Clicked="Button_Clicked" Text="Add New Label"/>
+        <Button x:Name="ButtonToBeClicked" Clicked="ButtonToBeClicked_Clicked" Text="Click me!" />
     </StackLayout>
 
 </ContentPage>

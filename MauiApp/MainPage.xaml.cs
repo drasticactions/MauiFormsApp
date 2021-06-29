@@ -11,10 +11,15 @@ namespace MauiApp
 		}
 
 		int count = 0;
-		private void OnCounterClicked(object sender, EventArgs e)
+
+		private void Button_Clicked(object sender, EventArgs e)
 		{
-			count++;
-			CounterLabel.Text = $"Current count: {count}";
+			this.InitialStack.Children.Add(new Label() { Text = "New Label" });
+		}
+
+		private void ButtonToBeClicked_Clicked(object sender, EventArgs e)
+		{
+			this.ButtonToBeClicked.Text = "Clicked!";
 		}
 	}
 }
