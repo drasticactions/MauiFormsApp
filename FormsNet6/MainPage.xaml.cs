@@ -20,6 +20,11 @@ namespace FormsNet6
             this.InitialStack.Children.Add(new Label() { Text = "New Label" });
         }
 
+        private void Button2_Clicked(object sender, EventArgs e)
+        {
+            this.DevelopText.Text = "New Text";
+        }
+
         private void ButtonToBeClicked_Clicked(object sender, EventArgs e)
         {
             this.ButtonToBeClicked.Text = "Clicked!";

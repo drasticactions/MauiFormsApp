@@ -17,6 +17,11 @@ namespace MauiApp
 			this.InitialStack.Children.Add(new Label() { Text = "New Label" });
 		}
 
+		private void Button2_Clicked(object sender, EventArgs e)
+		{
+			this.DevelopText.Text = "New Text";
+		}
+
 		private void NewWindow_Clicked(object sender, EventArgs e)
 		{
 			// Parent is Nav page.
