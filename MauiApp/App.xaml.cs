@@ -13,24 +13,45 @@ namespace MauiApp
 		public App()
 		{
 			InitializeComponent();
-			//VisualDiagnostics.VisualTreeChanged += VisualDiagnostics_VisualTreeChanged;
-		}
-
-        private void VisualDiagnostics_VisualTreeChanged(object sender, VisualTreeChangeEventArgs e)
-        {
-			var parentSourInfo = VisualDiagnostics.GetXamlSourceInfo(e.Parent);
-			var childSourInfo = VisualDiagnostics.GetXamlSourceInfo(e.Child);
-			Debug.WriteLine($"VisualTreeChangeEventArgs {e.ChangeType}:" +
-				$"{e.Parent}:{parentSourInfo?.SourceUri}:{parentSourInfo?.LineNumber}:{parentSourInfo?.LinePosition}-->" +
-				$" {e.Child}:{childSourInfo?.SourceUri}:{childSourInfo?.LineNumber}:{childSourInfo?.LinePosition}");
 		}
 
         protected override IWindow CreateWindow(IActivationState activationState)
 		{
+			// VisualDiagnostics.VisualTreeChanged += VisualDiagnostics_VisualTreeChanged;
+
 			this.On<Microsoft.Maui.Controls.PlatformConfiguration.Windows>()
 				.SetImageDirectory("Assets");
 
-			return new Microsoft.Maui.Controls.Window(new NavigationPage(new MainPage()));
+			return new TestWindow(new NavigationPage(new MainPage()));
+		}
+	}
+
+    public class TestWindow : Window
+    {
+
+        public TestWindow()
+        {
+        }
+
+        public TestWindow(Microsoft.Maui.Controls.Page page) : base(page)
+        {
+			VisualDiagnostics.VisualTreeChanged += VisualDiagnostics_VisualTreeChanged;
+		}
+
+		private void VisualDiagnostics_VisualTreeChanged(object sender, VisualTreeChangeEventArgs e)
+		{
+            try
+            {
+				var parentSourInfo = VisualDiagnostics.GetXamlSourceInfo(e.Parent);
+				var childSourInfo = VisualDiagnostics.GetXamlSourceInfo(e.Child);
+				Debug.WriteLine($"VisualTreeChangeEventArgs {e.ChangeType}:" +
+					$"{e.Parent}:{parentSourInfo?.SourceUri}:{parentSourInfo?.LineNumber}:{parentSourInfo?.LinePosition}-->" +
+					$" {e.Child}:{childSourInfo?.SourceUri}:{childSourInfo?.LineNumber}:{childSourInfo?.LinePosition}");
+			}
+            catch (Exception ex)
+            {
+				Debug.WriteLine(ex);
+			}
 		}
 	}
 }
