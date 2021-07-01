@@ -39,5 +39,10 @@ namespace MauiApp
 		{
 			this.Navigation.PushAsync(new MainPage());
 		}
+
+		private void SecondPageButton_Clicked(object sender, EventArgs e)
+		{
+			this.Navigation.PushAsync(new SecondPage());
+		}
 	}
 }

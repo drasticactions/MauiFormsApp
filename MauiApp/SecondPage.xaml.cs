@@ -9,5 +9,10 @@ namespace MauiApp
 		{
 			InitializeComponent();
 		}
+
+		private void ChangePageTitleButton_Clicked(object sender, EventArgs e)
+		{
+			this.Title = "New Title!";
+		}
 	}
 }

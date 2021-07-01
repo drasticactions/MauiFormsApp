@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Main Page"
              x:Class="FormsNet6.MainPage">
 
     <StackLayout x:Name="InitialStack">
@@ -19,6 +20,7 @@
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+        <Button x:Name="ChangePageTitleButton" Text="Change Page Title" Clicked="ChangePageTitleButton_Clicked"/>
         <Button Clicked="Button_Clicked" Text="Add New Label"/>
         <Button Clicked="Button2_Clicked" Text="Update 'Center' Text"/>
         <Button x:Name="ButtonToBeClicked" Clicked="ButtonToBeClicked_Clicked" Text="Click me!" />

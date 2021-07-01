@@ -22,6 +22,8 @@ namespace MauiApp
 			this.On<Microsoft.Maui.Controls.PlatformConfiguration.Windows>()
 				.SetImageDirectory("Assets");
 
+			//var tabbedPage = new Microsoft.Maui.Controls.TabbedPage();
+			//tabbedPage.Children.Add(new NavigationPage(new MainPage()));
 			return new TestWindow(new NavigationPage(new MainPage()));
 		}
 	}

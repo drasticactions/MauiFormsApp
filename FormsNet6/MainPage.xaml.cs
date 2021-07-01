@@ -25,6 +25,11 @@ namespace FormsNet6
             this.DevelopText.Text = "New Text";
         }
 
+        private void ChangePageTitleButton_Clicked(object sender, EventArgs e)
+        {
+            this.Title = "New Title!";
+        }
+
         private void ButtonToBeClicked_Clicked(object sender, EventArgs e)
         {
             this.ButtonToBeClicked.Text = "Clicked!";

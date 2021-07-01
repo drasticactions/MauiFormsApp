@@ -1,8 +1,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Second Page"
              x:Class="MauiApp.SecondPage">
 
     <StackLayout x:Name="InitialStack">
         <Label Text="Second Page!" FontSize="36"/>
+        <Button x:Name="ChangePageTitleButton" Text="Change Page Title" Clicked="ChangePageTitleButton_Clicked"/>
     </StackLayout>
 </ContentPage>
